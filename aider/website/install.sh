@@ -27,7 +27,7 @@ fi
 if [ -n "${INSTALLER_DOWNLOAD_URL:-}" ]; then
     ARTIFACT_DOWNLOAD_URL="$INSTALLER_DOWNLOAD_URL"
 else
-    ARTIFACT_DOWNLOAD_URL="${INSTALLER_BASE_URL}/astral-sh/uv/releases/download/0.5.9"
+    ARTIFACT_DOWNLOAD_URL="${INSTALLER_BASE_URL}/astral-sh/uv/releases/download/${APP_VERSION}"
 fi
 PRINT_VERBOSE=${INSTALLER_PRINT_VERBOSE:-0}
 PRINT_QUIET=${INSTALLER_PRINT_QUIET:-0}
@@ -57,10 +57,10 @@ usage() {
     cat <<EOF
 uv-installer.sh
 
-The installer for uv 0.5.9
+The installer for uv $APP_VERSION
 
 This script detects what platform you're on and fetches an appropriate archive from
-https://github.com/astral-sh/uv/releases/download/0.5.9
+https://github.com/astral-sh/uv/releases/download/$APP_VERSION
 then unpacks the binaries and installs them to the first of the following locations
 
     \$XDG_BIN_HOME
