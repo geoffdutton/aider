@@ -17,6 +17,7 @@ fi
 set -u
 
 APP_NAME="uv"
+# TODO: Use this below
 APP_VERSION="0.5.9"
 # Look for GitHub Enterprise-style base URL first
 if [ -n "${UV_INSTALLER_GHE_BASE_URL:-}" ]; then
